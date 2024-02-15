@@ -1,7 +1,3 @@
-Claro! Aqui está o README.md atualizado com as alterações sugeridas:
-
----
-
 # Node.js Video Compressor
 
 Este é um projeto Node.js para comprimir vídeos usando a biblioteca ffmpeg.
