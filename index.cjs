@@ -79,6 +79,12 @@ function compressVideo(selectedBitrate, inputFile) {
   const outputFileName = `${formattedFileName}_${hash}.mp4`;
   const outputPath = path.join(__dirname, "output", outputFileName);
 
+  // Verifica se a pasta de saída existe, senão, cria
+  const outputFolder = path.dirname(outputPath);
+  if (!fs.existsSync(outputFolder)) {
+    fs.mkdirSync(outputFolder, { recursive: true });
+  }
+
   // Configurações de compressão
   const compressionOptions = {
     videoBitrate: selectedBitrate,
